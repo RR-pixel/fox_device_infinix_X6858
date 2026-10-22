@@ -28,7 +28,7 @@ patch_files=(
 
 export ALLOW_MISSING_DEPENDENCIES=true
 
-export FOX_BUILD_DEVICE=X6855
+export FOX_BUILD_DEVICE=X6858
 export FOX_VIRTUAL_AB_DEVICE=1
 export FOX_VENDOR_BOOT_RECOVERY=1
 export FOX_INSTALLER_VENDOR_BOOT_RAMDISK_INSTALL=1
@@ -36,12 +36,12 @@ export FOX_USE_ZSTD_BINARY=1
 export FOX_USE_DMSETUP=1
 
 if ! command -v patch >/dev/null 2>&1; then
-	echo "[X6855] Missing required command: patch"
+	echo "[X6858] Missing required command: patch"
 else
 	for patch_file in "${patch_files[@]}"; do
 		patch_name="$(basename "${patch_file}")"
 		if [ ! -f "${patch_file}" ]; then
-			echo "[X6855] Missing patch: ${patch_file}"
+			echo "[X6858] Missing patch: ${patch_file}"
 		elif (
 			cd "${workspace_root}" &&
 			patch -p1 -N --dry-run --silent < "${patch_file}" >/dev/null 2>&1
@@ -50,12 +50,12 @@ else
 				cd "${workspace_root}" &&
 				patch -p1 -N --silent < "${patch_file}" >/dev/null 2>&1
 			); then
-				echo "[X6855] Applied patch: ${patch_name}"
+				echo "[X6858] Applied patch: ${patch_name}"
 			else
-				echo "[X6855] Failed to apply patch: ${patch_name}"
+				echo "[X6858] Failed to apply patch: ${patch_name}"
 			fi
 		else
-			echo "[X6855] Patch already applied or not applicable: ${patch_name}"
+			echo "[X6858] Patch already applied or not applicable: ${patch_name}"
 		fi
 	done
 fi
