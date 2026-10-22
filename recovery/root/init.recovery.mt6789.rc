@@ -10,6 +10,7 @@ on init
     # Load touchscreen modules
     insmod /lib/modules/touch/adaptive-ts.ko
     insmod /lib/modules/touch/focaltech_ft3683g.ko
+insmod /lib/modules/touch/gt9916_common.ko
 
     # Load cpufreq module
     insmod /lib/modules/mediatek-cpufreq-hw.ko
