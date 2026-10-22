@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/X6855
+DEVICE_PATH := device/infinix/X6858
 
 # Architecture
 TARGET_ARCH := arm64
@@ -145,4 +145,4 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X6855,Infinix-X6855
+TARGET_OTA_ASSERT_DEVICE := X6858,Infinix-X6858
