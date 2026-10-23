@@ -1,6 +1,6 @@
 # Crypto (disabled for now)
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO_FBE := false
 TW_USE_FSCRYPT_POLICY := 2
 TW_FORCE_KEYMASTER_VER := true
 
