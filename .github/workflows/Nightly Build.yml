@@ -8,10 +8,10 @@ on:
 env:
   SYNC_URL: 'https://gitlab.com/OrangeFox/sync.git'
   MANIFEST_BRANCH: '14.1'
-  DEVICE_PATH: 'device/infinix/X6855'
+  DEVICE_PATH: 'device/infinix/X6858'
   DEVICE_BRANCH: 'fox_14.1'
-  DEVICE_NAME: 'X6855'
-  MAKEFILE_NAME: 'fox_X6855'
+  DEVICE_NAME: 'X6858'
+  MAKEFILE_NAME: 'fox_X6858'
   BUILD_TARGET: 'vendorboot'
 
 jobs:
