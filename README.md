@@ -3,7 +3,7 @@
 ## Device picture
 
 <p align="left" width="100%">
-<img width="33%" src="https://m.gsmarena.com/infinix_note_50_4g-pictures-13705.php"> 
+<img width="33%" src="https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note50-1.jpg"> 
 </p>
 
 ## Device specifications
