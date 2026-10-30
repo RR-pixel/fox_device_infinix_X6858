@@ -1,4 +1,4 @@
-## OrangeFox device tree for Infinix Note 50 Pro 4G (_X6855_)
+## OrangeFox device tree for Infinix Note 50 4G (_X6858_)
 
 ## Device picture
 
@@ -16,7 +16,7 @@ GPU                     | Mali-G57 MC2
 Memory                  | 8/12 GB RAM
 Storage                 | 256 GB (UFS 2.2)
 MicroSD                 | None
-Shipped Android Version | 15.0
+Android Version         | 16.0
 Battery                 | Non-removable 5200 mAh
 Display                 | 1080 x 2436 pixels (~393 ppi density), 6.78 inches
 Camera                  | 50 MP (wide); 8 MP (front, ultrawide)
@@ -48,7 +48,7 @@ Clone the device tree:
 
 ```
 cd ~/YOUR/PATH/HERE
-git clone https://github.com/Andrikurn/fox_device_infinix_X6855.git -b fox_14.1 ./device/infinix/X6855
+git clone https://github.com/Andrikurn/fox_device_infinix_X6855.git -b fox_14.1 ./device/infinix/X6858
 ```
 
 Build:
@@ -56,5 +56,5 @@ Build:
 ```
 export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
-lunch fox_X6855-ap2a-eng && mka adbd vendorbootimage
+lunch fox_X6858-ap2a-eng && mka adbd vendorbootimage
 ```
