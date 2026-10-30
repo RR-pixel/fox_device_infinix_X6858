@@ -8,7 +8,7 @@
 
 ## Device specifications
 
-Device                  | Infinix Note 50 Pro 4G
+Device                  | Infinix Note 50 4G
 -----------------------:|:-----------------------------------------
 SoC                     | Mediatek Helio G100 Ultimate (6 nm)
 CPU                     | Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)
@@ -19,7 +19,7 @@ MicroSD                 | None
 Android Version         | 16.0
 Battery                 | Non-removable 5200 mAh
 Display                 | 1080 x 2436 pixels (~393 ppi density), 6.78 inches
-Camera                  | 50 MP (wide); 8 MP (front, ultrawide)
+Camera                  | 50 MP (wide); 8 MP (macro); 13 MP (front)
 
 ## Features
 
