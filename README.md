@@ -13,7 +13,7 @@ Device                  | Infinix Note 50 4G
 SoC                     | Mediatek Helio G100 Ultimate (6 nm)
 CPU                     | Octa-core (2x2.2 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)
 GPU                     | Mali-G57 MC2
-Memory                  | 8/12 GB RAM
+Memory                  | 8 GB RAM
 Storage                 | 256 GB (UFS 2.2)
 MicroSD                 | None
 Android Version         | 16.0
