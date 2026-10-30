@@ -19,7 +19,7 @@ MicroSD                 | None
 Android Version         | 16.0
 Battery                 | Non-removable 5200 mAh
 Display                 | 1080 x 2436 pixels (~393 ppi density), 6.78 inches
-Camera                  | 50 MP (wide); 8 MP (macro); 13 MP (front)
+Camera                  | 50 MP (wide); 2 MP (macro); 13 MP (front)
 
 ## Features
 
