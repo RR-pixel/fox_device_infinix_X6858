@@ -1,1 +1,10 @@
+# Izin minimal untuk boot HAL (sumber: kebijakan recovery X6850).
+recovery_only(`
+  allow hal_bootctl_default rootfs:dir r_dir_perms;
+  allow hal_bootctl_default tmpfs:dir search;
 
+  # OPSIONAL, hapus tanda # hanya jika ingin satu build yang
+  # mencatat semua denial berikutnya tanpa memblokir HAL.
+  # Belum terverifikasi lolos kompilasi di build kita.
+  # permissive hal_bootctl_default;
+')
