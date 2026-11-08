@@ -21,7 +21,6 @@ on init
 on fs
     wait /dev/block/platform/soc/11270000.ufshci
     symlink /dev/block/platform/soc/11270000.ufshci /dev/block/bootdevice
-	install_keyring
 
 on property:persist.vendor.mtk.pl_lnk=1
     symlink /dev/block/mapper/pl_a /dev/block/by-name/preloader_raw_a
