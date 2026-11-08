@@ -12,7 +12,7 @@ Produces in out_dir:
     ramdisk_<i>_<name>/   each vendor ramdisk fragment, extracted
 Supports LZ4-legacy, gzip and uncompressed fragments (newc cpio).
 """
-import gzip, os, stat, struct, sys
+import gzip, os, stat, struct, sys, subprocess
 
 LZ4_LEGACY = bytes.fromhex("02214c18")
 
@@ -50,6 +50,13 @@ def decompress(d):
         return b"".join(out)
     if d[:2] == b"\x1f\x8b": return gzip.decompress(d)
     if d[:6] == b"070701": return d
+            if d[:4] == bytes.fromhex("28b52ffd"):
+        return subprocess.run(
+            ["zstd", "-d", "-q", "-c"],
+            input=d,
+            stdout=subprocess.PIPE,
+            check=True
+        ).stdout
     raise ValueError("unknown ramdisk compression: " + d[:4].hex())
 
 def cpio_extract(d, dest):
