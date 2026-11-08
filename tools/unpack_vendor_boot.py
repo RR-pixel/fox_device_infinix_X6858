@@ -42,23 +42,34 @@ def lz4_block(src):
 
 def decompress(d):
     if d[:4] == LZ4_LEGACY:
-        i = 4; out = []
+        i = 4
+        out = []
         while i < len(d):
-            if d[i:i + 4] == LZ4_LEGACY: i += 4; continue
-            sz, = struct.unpack_from("<I", d, i); i += 4
-            out.append(lz4_block(d[i:i + sz])); i += sz
+            if d[i:i + 4] == LZ4_LEGACY:
+                i += 4
+                continue
+            sz, = struct.unpack_from("<I", d, i)
+            i += 4
+            out.append(lz4_block(d[i:i + sz]))
+            i += sz
         return b"".join(out)
-    if d[:2] == b"\x1f\x8b": return gzip.decompress(d)
-    if d[:6] == b"070701": return d
-            if d[:4] == bytes.fromhex("28b52ffd"):
+
+    if d[:2] == b"\x1f\x8b":
+        return gzip.decompress(d)
+
+    if d[:6] == b"070701":
+        return d
+
+    if d[:4] == bytes.fromhex("28b52ffd"):
         return subprocess.run(
             ["zstd", "-d", "-q", "-c"],
             input=d,
             stdout=subprocess.PIPE,
             check=True
         ).stdout
-    raise ValueError("unknown ramdisk compression: " + d[:4].hex())
 
+    raise ValueError("unknown ramdisk compression: " + d[:4].hex())
+    
 def cpio_extract(d, dest):
     i = 0; n = 0
     while True:
